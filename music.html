@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player with Links</title>
+  <style>
+    body{
+      background-color: rgb(15, 15, 16);
+    }
+    .container{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgb(9, 9, 9);
+    }
+
+    .box1, .box2 {
+      
+      padding: 15px;
+      background: #9eb6b8f4;
+      border-radius: 50px;
+    
+    }
+    .box1{
+      width: 250px;
+      height: 600px;
+      background-color: #29870a;
+      box-shadow: 10px 10px 10px rgb(123, 158, 114);
+    }
+    .box2 {
+      width: 700px;
+      height: 550px;
+      padding: 30px 200px;
+      box-shadow: 10px -10px 10px rgb(110, 140, 102);
+      
+    }
+
+    .box1 a {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #c5d2cd;
+      text-decoration: none;
+      color: #333;
+      border-radius: 20px;
+      box-shadow: 10px 10px 10px rgb(9, 9, 9);
+      
+    }
+    .playerarea {
+      display: none;
+    }
+
+    :target {
+      display: block;
+    }
+    .playerarea img{
+      width: 500px;
+      height: 350px;
+      
+      
+    }
+    audio{
+      width: 500px;
+      height: 70px;  
+      box-shadow: 10px 0px 20px rgb(137, 160, 157); 
+
+      
+     
+    }
+    .top{
+      font-family: cursive;
+      font-size: 50px;
+      margin-top: 20px;
+      margin-left: 50px;
+      color: rgb(194, 168, 26);
+    }
+    .artist{
+      /* border: 2px solid black; */
+      display: flex;
+      justify-content: space-evenly;
+      width: 1500px;
+      height: 220px;
+    }
+    .list img{
+      /* border: 2px solid black; */
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 10px -10px 10px rgb(84, 78, 79);
+      
+    }
+    .artzname{
+      /* border: 2px solid black; */
+      display: flex;
+      justify-content: space-around;
+      width: 1500px;
+      height: 50px;
+    }
+    .list2{
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      
+    }
+    h2{
+      padding: 2px 50px;
+    }
+    .photobg{
+      height: 200px;
+      width: 1000px;
+      background-image: url(a3.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      color: rgb(69, 159, 159);
+      padding-top: 50px;
+      padding-left: 50px;
+      padding-right: 100px;
+      padding-bottom: 100px;
+      font-size: 50px;
+    }
+   
+    input[type="text"]{
+      width: 150px;
+      height: 30px;
+      border-radius: 10px 10px;
+      text-align: center;
+      background-color: rgb(84, 166, 182);
+      color: #333;
+      
+    }
+    .second{
+      display: flex;
+      padding: 10px 30px;
+      gap: 100px;
+    }
+    .navbar{
+      width: 300px;
+      height: 300px;padding: 10px 20px;
+      
+      
+    }
+    .navbar ul{
+      list-style-type: none;
+      display: block;
+      overflow: hidden;
+    }
+    .navbar li{
+      padding: 10px;
+      font-size: 20px;
+      font-family: cursive;
+      text-shadow: 10px 10px 10px;
+      
+    }
+    .navbar a{
+      text-decoration: none;
+      color: aliceblue;
+    }
+    .navbar a:hover{
+      background-color: rgb(47, 128, 199);
+    }
+    input[type="search"]{
+        width: 250px;
+        height: 30px;
+        border-radius: 10px 10px;
+        border-top: none;
+        background-color: #19c837;
+    }
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="top">Where  Music Meets Mood🎶</div>
+  <div class="second">
+      <div class="navbar">
+        <ul>
+          <li><a href=""><input type="search" placeholder="What do you want to play?"></a></li>
+          <li><a href=""> Your library</a></li>
+          <li><a href="">Music</a></li>
+          <li><a href="">Liked Songs</a></li>
+          <li><a href="">Favourite</a></li>
+          <li><a href="">Album</a></li>
+         
+        </ul>
+                 
+                
+              
+      </div>
+      <div class="photobg">Audio Player<br>This Weekened<br>
+       <input type="text" placeholder="Enjoy">
+      </div>
+  </div>
+  <div class="container">
+  <div class="box1">
+   <font color="white"> <h2>Playlists</h2></font>
+    <a href="#audio1">Birds of feather</a>
+    <a href="#audio2">Seoul City</a>
+    <a href="#audio3">Die with smile</a>
+    <a href="#audio4">Set fire to the rain</a>
+    <a href="#audio5">Summertime sadness</a>
+   
+    
+  </div>
+
+  <div class="box2">
+    <h2>Player</h2>
+    <div id="audio1" class="playerarea">
+      <p>Now Playing: Birds of feather<br>_Billie Eilish</p>
+      <img src="a4.jpg"><br>
+      <audio src="BIRDS_OF_A_FEATHER(256k).mp3" controls></audio>
+    </div>
+
+    <div id="audio2" class="playerarea">
+      <p>Now Playing: Seoul City<br>_JENNIE</p>
+      <img src="a8.jpg"><br>
+      <audio src="Seoul_City(256k).mp3" controls></audio>
+    </div>
+
+    <div id="audio3" class="playerarea">
+      <p>Now Playing:<br> Die with smile<br>Lady_Gaga and _Bruno_Mars</p>
+      <img src="die with a smile.jpg"><br>
+      <audio src="Die_With_A_Smile__Live_in_Las_Vegas_(256k).mp3" controls></audio>
+    </div>
+    <div id="audio4" class="playerarea">
+      <p>Now Playing:<br>&nbsp;&nbsp;Set fire to the rain<br>&nbsp;&nbsp;Adele</p>
+      <img src="a6.jpg" controls><br>
+      <audio src="Adele_-_Set_Fire_To_The_Rain_Live_at_The_Royal_Albert_Hall_HQ_4K(256k).mp3" controls></audio>
+    </div>
+    
+    <div id="audio5" class="playerarea">
+      <p>Now Playing: Summertime sadness<br>Lana_dey_rey</p>
+      <img src="a7.jpg"controls><br>
+      <audio src="Summertime_Sadness(256k).mp3" controls></audio>
+    </div>
+    
+    
+    
+  </div>
+  </div>
+  <h2><font color="white">Popular Artists</font></h2>
+  <div class="artist">
+    <div class="list"><img src="a4.jpg" controls></div>
+    <div class="list"><img src="a6.jpg" controls></div>
+    <div class="list"><img src="a7.jpg" controls></div>
+    <div class="list"><img src="a1.jpg" controls></div>
+    <div class="list"><img src="a2.jpg" controls></div>
+  </div>
+  <div class="artzname">
+    <div class="list2">_Billie Eilish</div>
+    <div class="list2">adele</div>
+    <div class="list2">Lana_Dey_Rey</div>
+    <div class="list2">Bruno</div>
+    <div class="list2">Rose</div>
+  </div>
+</body>
+</html>
